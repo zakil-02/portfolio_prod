@@ -2203,6 +2203,12 @@ section.education .container, section.experience .container {
   padding: 15px;
   border-radius: 8px;
   margin-top: 15px;
+  color: var(--text-primary);
+}
+
+.project-details p {
+  color: var(--text-primary);
+  line-height: 1.6;
 }
 
 .details-title {
