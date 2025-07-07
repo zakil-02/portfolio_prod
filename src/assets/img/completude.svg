@@ -1,0 +1,8 @@
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="200" fill="#ffffff"/>
+  <g transform="translate(20, 80)">
+    <text x="80" y="20" font-family="Arial" font-size="22" font-weight="bold" text-anchor="middle" fill="#FF6600">COMPLÉTUDE</text>
+    <path d="M30,30 H130 V32 H30 Z" fill="#FF6600"/>
+    <text x="80" y="50" font-family="Arial" font-size="12" text-anchor="middle" fill="#FF6600">SOUTIEN SCOLAIRE</text>
+  </g>
+</svg>
