@@ -47,8 +47,8 @@ export const projects = [
     description: "Implemented U-Net segmentation and classification using Random Forest, SVM, and EfficientNet for dermoscopic images of skin lesions. Achieved 69% accuracy in identifying malignant melanomas.",
     longDescription: "This project focused on the automated classification of dermoscopic images of skin lesions to assist dermatologists in early detection of skin cancer. I implemented a two-stage approach: first using U-Net architecture for precise lesion segmentation, then applying multiple classification algorithms including Random Forest, Support Vector Machines, and EfficientNet. The system achieved 69% accuracy in identifying malignant melanomas, with particularly strong performance in distinguishing between benign and malignant lesions. The model was trained on the ISIC 2019 dataset and validated with dermatologist-labeled images. The final solution includes a web interface for uploading and analyzing new images with real-time results.",
     imgUrls: [
-      require("../assets/img/0.png"),
-      require("../assets/img/0.png")
+      require("../assets/img/lesions.png"),
+      require("../assets/img/lesions.png")
     ],
     tags: ["Deep Learning", "Computer Vision", "Medical AI", "Image Segmentation"],
     codeLink: "https://github.com/yourusername/skin-lesion-classification",
@@ -61,28 +61,28 @@ export const projects = [
     description: "Developed a comprehensive web application using Python and SQLite for managing university resources including people, rooms, curriculums, and courses. Implemented features for scheduling, resource allocation, and reporting.",
     longDescription: "This web application provides a comprehensive solution for university resource management, handling everything from personnel and room allocation to curriculum planning and course scheduling. Built with Python (Flask) and SQLite, the system features role-based access control, an intuitive drag-and-drop interface for scheduling, automated conflict detection, and detailed reporting capabilities. I implemented the database schema, backend logic, and frontend components, focusing on creating a responsive and user-friendly experience. The application significantly reduced scheduling conflicts and improved resource utilization efficiency by 30% at the pilot institution.",
     imgUrls: [
-      require("../assets/img/0.png"),
-      require("../assets/img/0.png")
+      require("../assets/img/univ.jpg"),
+      require("../assets/img/univ.jpg")
     ],
     tags: ["Web Development", "Database", "Python", "Flask", "SQLite"],
     codeLink: "https://github.com/yourusername/university-resource-manager",
     demoLink: "https://uni-resource-demo.herokuapp.com",
     featured: false
   },
-  {
-    id: 6,
-    title: "ML for Reconfigurable Intelligent Surfaces (RIS)",
-    description: "Applied Non-negative Matrix Factorization (NMF) to optimize signal redirection for Reconfigurable Intelligent Surfaces. Developed algorithms that improve wireless communication efficiency in complex environments.",
-    longDescription: "This research project explored the application of Non-negative Matrix Factorization (NMF) techniques to optimize signal redirection for Reconfigurable Intelligent Surfaces (RIS). I developed novel algorithms that decompose complex channel state information into interpretable components, allowing for more efficient configuration of RIS elements. The approach achieved a 40% improvement in signal-to-noise ratio compared to conventional methods, particularly in non-line-of-sight scenarios. The implementation includes a simulation environment for testing different RIS configurations and optimization strategies, with visualization tools to analyze signal propagation patterns.",
-    imgUrls: [
-      require("../assets/img/0.png"),
-      require("../assets/img/0.png")
-    ],
-    tags: ["Optimization", "Signal Processing", "Matrix Factorization", "Wireless Communications"],
-    codeLink: "https://github.com/yourusername/ris-nmf-optimization",
-    demoLink: "",
-    featured: false
-  },
+  // {
+  //   id: 6,
+  //   title: "ML for Reconfigurable Intelligent Surfaces (RIS)",
+  //   description: "Applied Non-negative Matrix Factorization (NMF) to optimize signal redirection for Reconfigurable Intelligent Surfaces. Developed algorithms that improve wireless communication efficiency in complex environments.",
+  //   longDescription: "This research project explored the application of Non-negative Matrix Factorization (NMF) techniques to optimize signal redirection for Reconfigurable Intelligent Surfaces (RIS). I developed novel algorithms that decompose complex channel state information into interpretable components, allowing for more efficient configuration of RIS elements. The approach achieved a 40% improvement in signal-to-noise ratio compared to conventional methods, particularly in non-line-of-sight scenarios. The implementation includes a simulation environment for testing different RIS configurations and optimization strategies, with visualization tools to analyze signal propagation patterns.",
+  //   imgUrls: [
+  //     require("../assets/img/0.png"),
+  //     require("../assets/img/0.png")
+  //   ],
+  //   tags: ["Optimization", "Signal Processing", "Matrix Factorization", "Wireless Communications"],
+  //   codeLink: "https://github.com/yourusername/ris-nmf-optimization",
+  //   demoLink: "",
+  //   featured: false
+  // },
   {
     id: 7,
     title: "Hexagonal Maze Solver",
@@ -103,8 +103,8 @@ export const projects = [
     description: "Used a Markovian SIR (Susceptible-Infected-Recovered) model to simulate virus transmission dynamics in various population settings. Analyzed the impact of different intervention strategies on disease spread.",
     longDescription: "This epidemiology simulation project implements a sophisticated Markovian SIR (Susceptible-Infected-Recovered) model to analyze virus transmission dynamics across different population settings. I developed a stochastic simulation framework that accounts for population heterogeneity, contact patterns, and intervention measures. The system allows for modeling various scenarios including different R₀ values, vaccination strategies, social distancing measures, and testing protocols. The simulation provides detailed visualizations of disease progression over time and geographic space, with statistical analysis of outcomes under different intervention strategies. The results demonstrated how targeted interventions could reduce peak infection rates by up to 60% compared to uniform approaches.",
     imgUrls: [
-      require("../assets/img/0.png"),
-      require("../assets/img/0.png")
+      require("../assets/img/epid.png"),
+      require("../assets/img/epid.png")
     ],
     tags: ["Modeling", "Statistics", "Epidemiology", "Simulation"],
     codeLink: "https://github.com/yourusername/epidemiology-sim",
@@ -117,8 +117,8 @@ export const projects = [
     description: "Developed a Markov model analyzing battery depletion, breakdown probabilities, and intervention times for free-floating electric scooter systems. Created optimization strategies for fleet management.",
     longDescription: "This project developed a comprehensive Markov model for analyzing and optimizing free-floating electric scooter systems. The model incorporates stochastic processes to simulate battery depletion patterns, breakdown probabilities, and optimal intervention times. I implemented algorithms that predict maintenance needs and optimize rebalancing operations based on usage patterns and geographic data. The system includes a discrete event simulation that models user behavior, scooter availability, and system performance under various conditions. The resulting optimization strategies demonstrated potential operational cost reductions of 25% while maintaining the same level of service availability. The model was validated using real-world data from a major scooter-sharing company.",
     imgUrls: [
-      require("../assets/img/0.png"),
-      require("../assets/img/0.png")
+      require("../assets/img/trot.png"),
+      require("../assets/img/trot.png")
     ],
     tags: ["Systems Modeling", "Probability", "Operations Research", "Urban Mobility"],
     codeLink: "https://github.com/yourusername/scooter-system-model",
@@ -131,8 +131,8 @@ export const projects = [
     description: "Built a convolutional neural network for emotion detection and style transfer to create personalized artwork. The system generates unique visual compositions based on the viewer's emotional state.",
     longDescription: "This interactive art installation combines computer vision and generative AI to create personalized visual experiences. I built a system that uses a convolutional neural network to detect viewers' emotions from facial expressions, then applies neural style transfer algorithms to generate unique artwork reflecting their emotional state. The installation features a camera that captures the viewer's image, processes it through the emotion detection model, and displays the resulting artwork on a large screen in real-time. The style transfer component draws from a curated collection of artistic styles that correspond to different emotional states, creating a unique bridge between human emotion and computational creativity. The project was exhibited at two art galleries and received positive feedback for its novel approach to interactive digital art.",
     imgUrls: [
-      require("../assets/img/0.png"),
-      require("../assets/img/0.png")
+      require("../assets/img/art.png"),
+      require("../assets/img/art.png")
     ],
     tags: ["AI Art", "Computer Vision", "Neural Style Transfer", "Interactive Installation"],
     codeLink: "https://github.com/yourusername/emotion-art-generator",

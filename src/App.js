@@ -6,11 +6,10 @@ import { Banner } from "./components/Banner";
 import { Projects } from "./components/Projects";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
-import ProgrammingLanguages from './components/prgL';
-import Softwares from './components/Software';
 import { EducationComponent } from './components/TelecomEducation.js';
 import { Experience } from './components/Experience.js';
 import { Loader } from './components/Loader.js';
+import { Interests } from './components/Interests.js';
 
 
 function App() {
@@ -32,11 +31,10 @@ function App() {
         <div>
           <NavBar />
           <Banner />
-          <ProgrammingLanguages/>
-          <Softwares/>
           <EducationComponent />
           <Experience />
           <Projects />
+          <Interests />
           <Contact />
           <Footer />
         </div>

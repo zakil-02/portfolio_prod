@@ -1,0 +1,113 @@
+/* HyperBadge CSS - Inspired by Amazon's HyperBadge */
+
+.hyperbadge-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.hyperbadge {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 50%;
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.7),
+    0 0 0 1px rgba(255, 140, 0, 0.3),
+    0 0 20px rgba(255, 140, 0, 0.5);
+}
+
+.hyperbadge-container:hover .hyperbadge {
+  transform: rotateY(10deg) rotateX(-10deg);
+}
+
+.hyperbadge-photo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  backface-visibility: hidden;
+  object-fit: cover;
+  transform: translateZ(0);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.hyperbadge-container:hover .hyperbadge-photo {
+  transform: translateZ(10px);
+}
+
+.hyperbadge-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(255, 255, 255, 0.4) 0%,
+    rgba(255, 255, 255, 0) 60%
+  );
+  opacity: 0;
+  transition: opacity 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  pointer-events: none;
+  transform: translateZ(20px);
+}
+
+.hyperbadge-container:hover .hyperbadge-glow {
+  opacity: 1;
+}
+
+.hyperbadge-reflection {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0) 60%
+  );
+  opacity: 0;
+  transition: opacity 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  pointer-events: none;
+  transform: translateZ(15px);
+}
+
+.hyperbadge-container:hover .hyperbadge-reflection {
+  opacity: 1;
+}
+
+.hyperbadge-border {
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border-radius: 50%;
+  border: 4px solid var(--accent-orange);
+  box-shadow: 0 0 20px rgba(255, 140, 0, 0.5);
+  opacity: 1;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  transform: translateZ(5px);
+}
+
+.hyperbadge-container:hover .hyperbadge-border {
+  border-width: 5px;
+  box-shadow: 0 0 30px rgba(255, 140, 0, 0.7);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .hyperbadge-container {
+    width: 200px;
+    height: 200px;
+  }
+}

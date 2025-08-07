@@ -20,7 +20,7 @@ export const Experience = () => {
         "Developed ESMM Assistant, an innovative LLM-based application trained on GAN-augmented historical routes and simulation data that aims in explaining routes simulations failures"
       ],
       logo: amazonLogo,
-      technologies: ["Python", "AWS", "Airflow", "ETL", "Machine Learning", "SageMaker", "LLM"]
+      technologies: ["Python", "AWS", "Airflow", "ETL", "Machine Learning", "SageMaker", "LLM", "Lambda", "Redshift"]
     },
     {
       company: "L'Oréal",
