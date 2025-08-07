@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/portfolio_prod/static/css/main.574476fe.css",
-    "main.js": "/portfolio_prod/static/js/main.81060c01.js",
-    "static/js/453.c27a454b.chunk.js": "/portfolio_prod/static/js/453.c27a454b.chunk.js",
+    "main.js": "/portfolio_prod/static/js/main.ba6e9594.js",
+    "static/js/453.15a9cb34.chunk.js": "/portfolio_prod/static/js/453.15a9cb34.chunk.js",
     "static/media/art.png": "/portfolio_prod/static/media/art.7d74d7d6cb3a16fe0be6.png",
     "static/media/levitate2.png": "/portfolio_prod/static/media/levitate2.fa19074afbdd353b211d.png",
     "static/media/paf.png": "/portfolio_prod/static/media/paf.7a03c4b67b63a8ddb473.png",
@@ -11,20 +11,26 @@
     "static/media/radiomique2.png": "/portfolio_prod/static/media/radiomique2.3ebef947373bf807e069.png",
     "static/media/lesions.png": "/portfolio_prod/static/media/lesions.a0ba2d6785c49b05d731.png",
     "static/media/radiomique1.png": "/portfolio_prod/static/media/radiomique1.facc55cbb6501fb03f00.png",
+    "static/media/copula.png": "/portfolio_prod/static/media/copula.d5ec0fc8bc92269599c1.png",
+    "static/media/admm.png": "/portfolio_prod/static/media/admm.4f9f6a30af20d144343a.png",
     "static/media/levitate1.png": "/portfolio_prod/static/media/levitate1.3d9f2c85f44786ec440b.png",
+    "static/media/spectralPruning.jpg": "/portfolio_prod/static/media/spectralPruning.40f281806798311f94eb.jpg",
     "static/media/amazon.png": "/portfolio_prod/static/media/amazon.853ce644dad8c2d60493.png",
+    "static/media/powrRL.png": "/portfolio_prod/static/media/powrRL.46eec892502c5bb292f3.png",
     "static/media/epoly.png": "/portfolio_prod/static/media/epoly.bfaa7e44d5f706667763.png",
     "static/media/telecom_new.png": "/portfolio_prod/static/media/telecom_new.6a35f6f9df3a0937a93f.png",
     "static/media/CentraNo2-Bold.ttf": "/portfolio_prod/static/media/CentraNo2-Bold.2faff7f7d3fc92a2fcd9.ttf",
     "static/media/CentraNo2-Medium.ttf": "/portfolio_prod/static/media/CentraNo2-Medium.f94be5b326d78bb32b95.ttf",
     "static/media/CentraNo2-Book.ttf": "/portfolio_prod/static/media/CentraNo2-Book.2b143fa4b734a3584043.ttf",
+    "static/media/stream.png": "/portfolio_prod/static/media/stream.01f93c6abbab17c7826b.png",
     "static/media/completude.png": "/portfolio_prod/static/media/completude.377194356cc2eb07fd69.png",
     "static/media/trot.png": "/portfolio_prod/static/media/trot.c2e5fdd2237be88c3e48.png",
     "static/media/epid.png": "/portfolio_prod/static/media/epid.c080d5806f271a5e4c8b.png",
-    "static/media/1.png": "/portfolio_prod/static/media/1.1ba03a23eecb68385ed3.png",
     "static/media/0.png": "/portfolio_prod/static/media/0.35f49ce194621d768d17.png",
     "static/media/lm6e.png": "/portfolio_prod/static/media/lm6e.02c876087362312a2a61.png",
     "static/media/univ.jpg": "/portfolio_prod/static/media/univ.a38a1ef29ef26ce7c3f4.jpg",
+    "static/media/maze1.png": "/portfolio_prod/static/media/maze1.9f83b3470ba754fdc88e.png",
+    "static/media/maze.png": "/portfolio_prod/static/media/maze.a6b2e13abed70e08532c.png",
     "static/media/contact-img.svg": "/portfolio_prod/static/media/contact-img.62aa99e0f3b968b5d1ce9eb047f34fc7.svg",
     "static/media/loreal.png": "/portfolio_prod/static/media/loreal.324adca301ec3a6f06e7.png",
     "static/media/IMG_5468.jpg": "/portfolio_prod/static/media/IMG_5468.1513b599923529ae65ed.jpg",
@@ -38,11 +44,11 @@
     "static/media/nav-icon1.svg": "/portfolio_prod/static/media/nav-icon1.dff40ae802524d8fc0cbce3f312abe4f.svg",
     "static/media/tv-icon.svg": "/portfolio_prod/static/media/tv-icon.8151244f31fcfaad5a1d8d56671ed620.svg",
     "main.574476fe.css.map": "/portfolio_prod/static/css/main.574476fe.css.map",
-    "main.81060c01.js.map": "/portfolio_prod/static/js/main.81060c01.js.map",
-    "453.c27a454b.chunk.js.map": "/portfolio_prod/static/js/453.c27a454b.chunk.js.map"
+    "main.ba6e9594.js.map": "/portfolio_prod/static/js/main.ba6e9594.js.map",
+    "453.15a9cb34.chunk.js.map": "/portfolio_prod/static/js/453.15a9cb34.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.574476fe.css",
-    "static/js/main.81060c01.js"
+    "static/js/main.ba6e9594.js"
   ]
 }
