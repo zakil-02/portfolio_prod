@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Card, Button, Modal, Badge } from 'react-bootstrap';
 import { projects } from "../data/projects_data";
-import { FiGithub, FiExternalLink, FiChevronDown, FiChevronUp, FiImage } from 'react-icons/fi';
+import { FiGithub, FiExternalLink, FiChevronDown, FiChevronUp, FiImage, FiFileText, FiLink } from 'react-icons/fi';
 import ImageCarousel from "./ImageCarousel";
 import '../App.css';
 
@@ -20,6 +20,13 @@ export const Projects = () => {
       setExpandedProject(null);
     } else {
       setExpandedProject(id);
+    }
+  };
+
+  const handleReportClick = (reportLink) => {
+    if (reportLink) {
+      // Open PDF in new window
+      window.open(reportLink, '_blank');
     }
   };
 
@@ -94,6 +101,40 @@ export const Projects = () => {
                           <div className="project-details mt-3">
                             <h5 className="details-title">Project Details</h5>
                             <p>{project.longDescription}</p>
+                            
+                            <div className="project-resources mt-3">
+                              <div className="resource-item">
+                                <strong>Report:</strong>
+                                {project.reportLink ? (
+                                  <button 
+                                    className="resource-link"
+                                    onClick={() => handleReportClick(project.reportLink)}
+                                    style={{ color: '#FF8C00' }}
+                                  >
+                                    <FiFileText /> View Report
+                                  </button>
+                                ) : (
+                                  <span className="resource-placeholder">Coming soon</span>
+                                )}
+                              </div>
+                              
+                              <div className="resource-item">
+                                <strong>Reference:</strong>
+                                {project.referenceLink ? (
+                                  <a 
+                                    href={project.referenceLink} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="resource-link"
+                                    style={{ color: '#FF8C00' }}
+                                  >
+                                    <FiLink /> View Reference
+                                  </a>
+                                ) : (
+                                  <span className="resource-placeholder">Coming soon</span>
+                                )}
+                              </div>
+                            </div>
                           </div>
                         )}
                       </div>
@@ -130,7 +171,7 @@ export const Projects = () => {
                   ))}
                 </div>
                 
-                <div className="project-modal-links">
+                <div className="project-modal-links mb-3">
                   {selectedProject.codeLink && (
                     <Button 
                       href={selectedProject.codeLink} 
@@ -152,6 +193,40 @@ export const Projects = () => {
                       <FiExternalLink className="me-2" /> Live Demo
                     </Button>
                   )}
+                </div>
+
+                <div className="project-resources">
+                  <div className="resource-item">
+                    <strong>Report:</strong>
+                    {selectedProject.reportLink ? (
+                      <button 
+                        className="resource-link"
+                        onClick={() => handleReportClick(selectedProject.reportLink)}
+                        style={{ color: '#FF8C00' }}
+                      >
+                        <FiFileText /> View Report
+                      </button>
+                    ) : (
+                      <span className="resource-placeholder">Coming soon</span>
+                    )}
+                  </div>
+                  
+                  <div className="resource-item">
+                    <strong>Reference:</strong>
+                    {selectedProject.referenceLink ? (
+                      <a 
+                        href={selectedProject.referenceLink} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="resource-link"
+                        style={{ color: '#FF8C00' }}
+                      >
+                        <FiLink /> View Reference
+                      </a>
+                    ) : (
+                      <span className="resource-placeholder">Coming soon</span>
+                    )}
+                  </div>
                 </div>
               </div>
             </Modal.Body>

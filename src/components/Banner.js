@@ -54,6 +54,8 @@ export const Banner = () => {
                 <span className="tagline">Welcome to my Portfolio</span>
                 <h1>Hi! I'm Zakaria</h1>
                   <p>I am currently pursuing a master M2 Data Science (M2DS) at Ecole Polytechnique in parallel with the last year of my Master in Engineering at Telecom Paris. At Telecom Paris, I am pursuing a double major in Signal Processing for AI and Computer Vision. With a deep passion for statistics, machine learning, and computer science, I am dedicated to leveraging these disciplines to drive innovation and solve complex problems.</p>
+                  <p>Email : zakaria.akil@polytechnique.edu / zakaria.akil@telecom-paris.fr </p>
+                  <p>Location : Luxembourg </p>
                   <button onClick={() => console.log('connect')}>Let's Connect <ArrowRightCircle size={25} /></button>
               </div>}
             </TrackVisibility>

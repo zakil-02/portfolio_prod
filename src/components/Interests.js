@@ -2,16 +2,16 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
-import footballIcon from "../assets/img/football-icon.svg";
+import footballIcon from "../assets/img/champ.png";
 import rapIcon from "../assets/img/music-icon.svg";
-import fifaIcon from "../assets/img/game-icon.svg";
+import fifaIcon from "../assets/img/fc.png";
 import officeIcon from "../assets/img/tv-icon.svg";
 
 export const Interests = () => {
   const interests = [
     {
       title: "Football",
-      description: "Passionate about football, both watching and playing.",
+      description: "Passionate about football, both watching and playing. Big Fc Barcelona club!",
       icon: footballIcon
     },
     {
@@ -20,12 +20,12 @@ export const Interests = () => {
       icon: rapIcon
     },
     {
-      title: "FIFA",
-      description: "Avid FIFA player and enthusiast of the game series.",
+      title: "FC",
+      description: "I am an FIFA/FC gamer",
       icon: fifaIcon
     },
     {
-      title: "The Office (Dunder Mifflin)",
+      title: "The Office",
       description: "Big fan of The Office TV show and its humor.",
       icon: officeIcon
     }

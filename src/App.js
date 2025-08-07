@@ -10,6 +10,8 @@ import { EducationComponent } from './components/TelecomEducation.js';
 import { Experience } from './components/Experience.js';
 import { Loader } from './components/Loader.js';
 import { Interests } from './components/Interests.js';
+import ProgrammingLanguages from './components/prgL.js';
+import Softwares from './components/Software.js';
 
 
 function App() {
@@ -34,6 +36,8 @@ function App() {
           <EducationComponent />
           <Experience />
           <Projects />
+          <ProgrammingLanguages />
+          <Softwares />
           <Interests />
           <Contact />
           <Footer />
