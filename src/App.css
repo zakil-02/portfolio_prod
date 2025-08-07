@@ -459,6 +459,56 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   }
 }
 
+/* Progress Note Styles */
+.banner .progress-note {
+  margin: 20px 0;
+  padding: 0;
+}
+
+.banner .progress-badge {
+  display: inline-block;
+  background: #ff6b35;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 0;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+  animation: pulse 2s infinite;
+}
+
+.banner .progress-text {
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-style: italic;
+  margin: 8px 0 0 0;
+  opacity: 0.8;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+  }
+  50% {
+    box-shadow: 0 4px 20px rgba(255, 107, 53, 0.5);
+  }
+  100% {
+    box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+  }
+}
+
+@media (max-width: 768px) {
+  .banner .progress-badge {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+  
+  .banner .progress-text {
+    font-size: 12px;
+  }
+}
+
 .banner h1 {
   font-size: 65px;
   font-weight: 700;

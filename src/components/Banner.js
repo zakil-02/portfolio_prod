@@ -52,6 +52,10 @@ export const Banner = () => {
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <span className="tagline">Welcome to my Portfolio</span>
+                <div className="progress-note">
+                  <span className="progress-badge">🚧 Portfolio in Progress - 90% Complete</span>
+                  <p className="progress-text">Currently focused on my internship work - updates coming soon!</p>
+                </div>
                 <h1>Hi! I'm Zakaria</h1>
                   <p>I am currently pursuing a master M2 Data Science (M2DS) at Ecole Polytechnique in parallel with the last year of my Master in Engineering at Telecom Paris. At Telecom Paris, I am pursuing a double major in Signal Processing for AI and Computer Vision. With a deep passion for statistics, machine learning, and computer science, I am dedicated to leveraging these disciplines to drive innovation and solve complex problems.</p>
                   <p>Email : zakaria.akil@polytechnique.edu / zakaria.akil@telecom-paris.fr </p>
