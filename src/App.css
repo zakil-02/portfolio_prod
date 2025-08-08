@@ -1170,8 +1170,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .language-image {
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70;
 }
 
 @media (max-width: 768px) {
