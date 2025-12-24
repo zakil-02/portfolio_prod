@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import { FiCalendar, FiChevronDown, FiChevronUp } from 'react-icons/fi';
 import '../App.css';

@@ -413,6 +413,19 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  pointer-events: none;
 }
 
 @media (max-width: 768px) {
@@ -424,88 +437,31 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .banner .tagline {
   font-weight: 700;
   letter-spacing: 0.8px;
-  padding: 8px 15px;
+  padding: 12px 24px;
   background-color: var(--secondary-dark);
   border: 1px solid var(--accent-orange);
-  border-radius: 15px;
+  border-radius: 25px;
   font-size: 18px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   display: inline-block;
   color: var(--text-primary);
   position: relative;
-  transition: var(--transition);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  z-index: 2;
 }
 
-.banner .tagline::after {
-  content: '';
-  position: absolute;
-  bottom: -5px;
-  left: 15px;
-  width: 50px;
-  height: 2px;
-  background-color: var(--accent-orange);
+.banner .tagline:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(255, 140, 0, 0.4);
+  border-color: var(--accent-orange);
 }
 
 @media (max-width: 768px) {
   .banner .tagline {
     font-size: 16px;
-    padding: 6px 12px;
-    margin-bottom: 15px;
-  }
-  
-  .banner .tagline::after {
-    width: 30px;
-  }
-}
-
-/* Progress Note Styles */
-.banner .progress-note {
-  margin: 20px 0;
-  padding: 0;
-}
-
-.banner .progress-badge {
-  display: inline-block;
-  background: #ff6b35;
-  color: white;
-  padding: 8px 16px;
-  border-radius: 0;
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
-  animation: pulse 2s infinite;
-}
-
-.banner .progress-text {
-  color: var(--text-secondary);
-  font-size: 14px;
-  font-style: italic;
-  margin: 8px 0 0 0;
-  opacity: 0.8;
-}
-
-@keyframes pulse {
-  0% {
-    box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
-  }
-  50% {
-    box-shadow: 0 4px 20px rgba(255, 107, 53, 0.5);
-  }
-  100% {
-    box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
-  }
-}
-
-@media (max-width: 768px) {
-  .banner .progress-badge {
-    font-size: 12px;
-    padding: 6px 12px;
-  }
-  
-  .banner .progress-text {
-    font-size: 12px;
+    padding: 10px 20px;
+    margin-bottom: 20px;
   }
 }
 
@@ -513,29 +469,63 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-size: 65px;
   font-weight: 700;
   letter-spacing: 0.8px;
-  line-height: 1;
-  margin-bottom: 20px;
+  line-height: 1.1;
+  margin-bottom: 30px;
   display: block;
+  color: var(--text-primary);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  z-index: 2;
+  position: relative;
 }
 
 @media (max-width: 768px) {
   .banner h1 {
     font-size: 40px;
+    margin-bottom: 20px;
   }
 }
 
 .banner p {
   color: var(--text-secondary);
   font-size: 18px;
-  letter-spacing: 0.8px;
-  line-height: 1.5em;
+  letter-spacing: 0.5px;
+  line-height: 1.6em;
   width: 96%;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  font-weight: 400;
+  z-index: 2;
+  position: relative;
+}
+
+.banner p:first-of-type {
+  font-size: 19px;
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 500;
+}
+
+.banner p:nth-of-type(2),
+.banner p:nth-of-type(3) {
+  font-size: 16px;
+  color: var(--accent-orange);
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
 
 @media (max-width: 768px) {
   .banner p {
     font-size: 16px;
     width: 100%;
+  }
+  
+  .banner p:first-of-type {
+    font-size: 17px;
+  }
+  
+  .banner p:nth-of-type(2),
+  .banner p:nth-of-type(3) {
+    font-size: 15px;
   }
 }
 
@@ -547,42 +537,111 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: 0.8px;
   display: flex;
   align-items: center;
-  background-color: var(--secondary-dark);
-  border: 1px solid var(--accent-orange);
-  border-radius: 30px;
-  padding: 10px 20px;
-  transition: var(--transition);
+  background-color: transparent;
+  border: 2px solid var(--accent-orange);
+  border-radius: 50px;
+  padding: 15px 30px;
+  transition: all 0.3s ease;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 2;
 }
 
 .banner button:hover {
-  background-color: var(--accent-orange);
+  background-color: rgba(255, 140, 0, 0.1);
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 25px rgba(255, 140, 0, 0.3);
+  border-color: var(--accent-orange);
+  color: var(--text-primary);
 }
 
 @media (max-width: 768px) {
   .banner button {
     font-size: 16px;
     margin-top: 30px;
-    padding: 8px 16px;
+    padding: 12px 24px;
   }
 }
 
 .banner button svg {
-  font-size: 20px;
-  margin-left: 10px;
-  transition: var(--transition);
+  font-size: 22px;
+  margin-left: 12px;
+  transition: all 0.3s ease;
   line-height: 1;
 }
 
 .banner button:hover svg {
-  margin-left: 15px;
-  color: var(--text-primary);
+  margin-left: 18px;
+  transform: translateX(3px);
 }
 
-.banner img {
-  /* Animation removed for professional look */
+/* Enhanced profile image container */
+.banner .profile-image-container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Contact info styling */
+.banner .contact-info {
+  margin-bottom: 20px;
+}
+
+.banner .contact-info p {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: var(--accent-orange);
+  font-weight: 600;
+}
+
+.banner .email-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.banner .email-list li {
+  color: var(--text-primary);
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  position: relative;
+  padding-left: 15px;
+}
+
+.banner .email-list li::before {
+  content: '•';
+  color: var(--accent-orange);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.banner p:nth-of-type(3) {
+  font-size: 16px;
+  color: var(--text-primary) !important;
+  font-weight: 500 !important;
+  margin-bottom: 8px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.banner p:nth-of-type(3) strong,
+.banner .contact-info p strong {
+  color: var(--accent-orange);
+}
+
+@media (max-width: 768px) {
+  .banner .contact-info p {
+    font-size: 15px;
+  }
+  
+  .banner .email-list li {
+    font-size: 14px;
+  }
+  
+  .banner p:nth-of-type(3) {
+    font-size: 15px;
+  }
 }
 
 .txt-rotate > .wrap {

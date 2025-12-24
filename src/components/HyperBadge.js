@@ -1,4 +1,3 @@
-import React from 'react';
 import './HyperBadge.css';
 
 const HyperBadge = ({ imageSrc, alt }) => {

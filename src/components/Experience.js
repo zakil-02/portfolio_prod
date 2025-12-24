@@ -1,4 +1,3 @@
-import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import { FiCalendar, FiMapPin } from 'react-icons/fi';
 import '../App.css';
@@ -12,15 +11,28 @@ export const Experience = () => {
     {
       company: "Amazon",
       position: "Business Intelligence Engineer",
-      duration: "April 2025 - present",
+      duration: "December 2025 - present",
       location: "Luxembourg",
       description: [
-        "Architected end-to-end ETL pipelines using Airflow DAG, AWS S3, and AWS Lambda, automating critical business metrics reporting for senior stakeholders",
-        "Led development of an ML-powered analytics solution for global warehouse closure management, implementing forecasting models via AWS SageMaker to predict warehouse closure",
-        "Developed ESMM Assistant, an innovative LLM-based application trained on GAN-augmented historical routes and simulation data that aims in explaining routes simulations failures"
+        "Building automations, infrastructures & decision-making analyses to support business operations and strategic initiatives"
       ],
       logo: amazonLogo,
-      technologies: ["Python", "AWS", "Airflow", "ETL", "Machine Learning", "SageMaker", "LLM", "Lambda", "Redshift"]
+      technologies: ["AWS CDK", "GenAI", "Python", "TypeScript", "SQL", "QuickSight"]
+    },
+    {
+      company: "Amazon",
+      position: "BI/Data Engineer - Internship",
+      duration: "April 2025 - November 2025",
+      location: "Luxembourg",
+      description: [
+        "Developed a Warehouse Closure Forecasting system to forecast warehouse closures across 5 European countries, preventing configuration defects through probabilistic and hazard-based models",
+        "Achieved PR-AUC of 0.90 and F1 of 0.84 for next-day risk prediction, and PR-AUC of 0.99 and F1 of 0.97 for early alerting tasks",
+        "Built fully automated AWS-based pipeline using CDK, Lambda, Airflow, Step Functions, and QuickSight to replace manual Page 0 performance review processes",
+        "Reduced reporting latency from several days to hours while establishing single source of truth for TNC team metrics",
+        // "Integrated automated task creation and tracking via Asana and Slack bot for Release Candidate rejection workflows"
+      ],
+      logo: amazonLogo,
+      technologies: ["Machine Learning", "AWS CDK", "AWS Lambda", "Python", "SQL", "ETL"]
     },
     {
       company: "L'Oréal",

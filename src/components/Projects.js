@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Container, Row, Col, Card, Button, Modal, Badge } from 'react-bootstrap';
 import { projects } from "../data/projects_data";
 import { FiGithub, FiExternalLink, FiChevronDown, FiChevronUp, FiImage, FiFileText, FiLink } from 'react-icons/fi';

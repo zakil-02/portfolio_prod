@@ -1,4 +1,3 @@
-import React from 'react';
 import 'animate.css';
 //import TrackVisibility from 'react-on-screen';
 
