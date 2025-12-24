@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio_prod/static/css/main.d04d0c1b.css",
-    "main.js": "/portfolio_prod/static/js/main.beaa333b.js",
+    "main.css": "/portfolio_prod/static/css/main.bc6a61cb.css",
+    "main.js": "/portfolio_prod/static/js/main.6290954f.js",
     "static/js/453.15a9cb34.chunk.js": "/portfolio_prod/static/js/453.15a9cb34.chunk.js",
     "static/media/art.png": "/portfolio_prod/static/media/art.7d74d7d6cb3a16fe0be6.png",
     "static/media/levitate2.png": "/portfolio_prod/static/media/levitate2.fa19074afbdd353b211d.png",
@@ -75,12 +75,12 @@
     "static/media/tv-icon.svg": "/portfolio_prod/static/media/tv-icon.8151244f31fcfaad5a1d8d56671ed620.svg",
     "static/media/css.svg": "/portfolio_prod/static/media/css.cce1e71a67427e01caedeed1b01d4efa.svg",
     "static/media/html.svg": "/portfolio_prod/static/media/html.0c8899975fbb5345002df9b408db0cc0.svg",
-    "main.d04d0c1b.css.map": "/portfolio_prod/static/css/main.d04d0c1b.css.map",
-    "main.beaa333b.js.map": "/portfolio_prod/static/js/main.beaa333b.js.map",
+    "main.bc6a61cb.css.map": "/portfolio_prod/static/css/main.bc6a61cb.css.map",
+    "main.6290954f.js.map": "/portfolio_prod/static/js/main.6290954f.js.map",
     "453.15a9cb34.chunk.js.map": "/portfolio_prod/static/js/453.15a9cb34.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d04d0c1b.css",
-    "static/js/main.beaa333b.js"
+    "static/css/main.bc6a61cb.css",
+    "static/js/main.6290954f.js"
   ]
 }
