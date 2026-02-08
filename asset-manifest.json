@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio_prod/static/css/main.c6e893ff.css",
-    "main.js": "/portfolio_prod/static/js/main.b3151b32.js",
+    "main.js": "/portfolio_prod/static/js/main.f2c0be96.js",
     "static/js/453.15a9cb34.chunk.js": "/portfolio_prod/static/js/453.15a9cb34.chunk.js",
     "static/media/art.png": "/portfolio_prod/static/media/art.7d74d7d6cb3a16fe0be6.png",
     "static/media/levitate2.png": "/portfolio_prod/static/media/levitate2.fa19074afbdd353b211d.png",
@@ -21,6 +21,7 @@
     "static/media/radiomique1.png": "/portfolio_prod/static/media/radiomique1.facc55cbb6501fb03f00.png",
     "static/media/ML_with_Graphs_PaperReview.pdf": "/portfolio_prod/static/media/ML_with_Graphs_PaperReview.819dc1168680be79990b.pdf",
     "static/media/qgans.png": "/portfolio_prod/static/media/qgans.06d08c9ed3188572113f.png",
+    "static/media/mazeSolver.png": "/portfolio_prod/static/media/mazeSolver.d3f01d194bc3fa002296.png",
     "static/media/copula.png": "/portfolio_prod/static/media/copula.d5ec0fc8bc92269599c1.png",
     "static/media/admm.png": "/portfolio_prod/static/media/admm.4f9f6a30af20d144343a.png",
     "static/media/react.png": "/portfolio_prod/static/media/react.8a6fc0a24a800d1e0f4a.png",
@@ -53,8 +54,6 @@
     "static/media/glue.png": "/portfolio_prod/static/media/glue.08608de3142579520e1d.png",
     "static/media/lm6e.png": "/portfolio_prod/static/media/lm6e.02c876087362312a2a61.png",
     "static/media/univ.jpg": "/portfolio_prod/static/media/univ.a38a1ef29ef26ce7c3f4.jpg",
-    "static/media/maze1.png": "/portfolio_prod/static/media/maze1.9f83b3470ba754fdc88e.png",
-    "static/media/maze.png": "/portfolio_prod/static/media/maze.a6b2e13abed70e08532c.png",
     "static/media/akilz.jpg": "/portfolio_prod/static/media/akilz.738f75db53dc3dab8b69.jpg",
     "static/media/contact-img.svg": "/portfolio_prod/static/media/contact-img.62aa99e0f3b968b5d1ce9eb047f34fc7.svg",
     "static/media/solidity.png": "/portfolio_prod/static/media/solidity.f64b92b2591809a08001.png",
@@ -76,11 +75,11 @@
     "static/media/css.svg": "/portfolio_prod/static/media/css.cce1e71a67427e01caedeed1b01d4efa.svg",
     "static/media/html.svg": "/portfolio_prod/static/media/html.0c8899975fbb5345002df9b408db0cc0.svg",
     "main.c6e893ff.css.map": "/portfolio_prod/static/css/main.c6e893ff.css.map",
-    "main.b3151b32.js.map": "/portfolio_prod/static/js/main.b3151b32.js.map",
+    "main.f2c0be96.js.map": "/portfolio_prod/static/js/main.f2c0be96.js.map",
     "453.15a9cb34.chunk.js.map": "/portfolio_prod/static/js/453.15a9cb34.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c6e893ff.css",
-    "static/js/main.b3151b32.js"
+    "static/js/main.f2c0be96.js"
   ]
 }
