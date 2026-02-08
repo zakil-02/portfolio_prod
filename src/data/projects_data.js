@@ -141,8 +141,8 @@ export const projects = [
     description: "Implemented Dijkstra's algorithm and developed a Java GUI to solve hexagonal mazes within an OOP framework.",
     longDescription: "This project implements an efficient solver for hexagonal mazes using Dijkstra's algorithm within a robust object-oriented programming framework in Java. The system handles the unique challenges of hexagonal grid navigation, including different movement patterns and distance calculations compared to traditional square grids. A custom data structure was developed to represent the hexagonal maze topology, and multiple pathfinding algorithms were implemented for performance comparison. The application features an interactive Java GUI that visualizes the maze-solving process in real-time, allowing users to observe how different algorithms explore the maze and find optimal paths. Performance analysis tools measure and compare execution time, memory usage, and path optimality across different maze configurations and sizes.",
     imgUrls: [
-      require("../assets/img/maze.png"),
-      require("../assets/img/maze1.png")
+      require("../assets/img/mazeSolver.png"),
+      require("../assets/img/mazeSolver.png")
     ],
     tags: ["Algorithms", "Java", "GUI Development", "Pathfinding", "Data Structures"],
     codeLink: "https://github.com/zakil-02/JAVA-Maze-Solver",
