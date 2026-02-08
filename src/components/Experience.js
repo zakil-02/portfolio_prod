@@ -10,26 +10,23 @@ export const Experience = () => {
   const experiences = [
     {
       company: "Amazon",
-      position: "Business Intelligence Engineer",
+      position: "BI Engineer I",
       duration: "December 2025 - present",
       location: "Luxembourg",
       description: [
-        "Building automations, infrastructures & decision-making analyses to support business operations and strategic initiatives"
+        "Building Automations, Infrastructures & Data Analyses"
       ],
       logo: amazonLogo,
       technologies: ["AWS CDK", "GenAI", "Python", "TypeScript", "SQL", "QuickSight"]
     },
     {
       company: "Amazon",
-      position: "BI/Data Engineer - Internship",
-      duration: "April 2025 - November 2025",
+      position: "BI/Data Engineer Intern",
+      duration: "April 2025 - October 2025",
       location: "Luxembourg",
       description: [
-        "Developed a Warehouse Closure Forecasting system to forecast warehouse closures across 5 European countries, preventing configuration defects through probabilistic and hazard-based models",
-        "Achieved PR-AUC of 0.90 and F1 of 0.84 for next-day risk prediction, and PR-AUC of 0.99 and F1 of 0.97 for early alerting tasks",
-        "Built fully automated AWS-based pipeline using CDK, Lambda, Airflow, Step Functions, and QuickSight to replace manual Page 0 performance review processes",
-        "Reduced reporting latency from several days to hours while establishing single source of truth for TNC team metrics",
-        // "Integrated automated task creation and tracking via Asana and Slack bot for Release Candidate rejection workflows"
+        "Developed a Warehouse Closure Forecasting system to forecast warehouse closures across 5 European countries, preventing configuration defects through probabilistic and hazard-based models. Achieved PR-AUC of 0.90 and F1 of 0.84 for next-day risk prediction, and PR-AUC of 0.99 and F1 of 0.97 for early alerting tasks",
+        "Built fully automated AWS-based pipeline using CDK, Lambda, Airflow, Step Functions, and QuickSight to replace manual Page 0 performance review processes. Reduced reporting latency from several days to hours while establishing single source of truth for TNC team metrics",
       ],
       logo: amazonLogo,
       technologies: ["Machine Learning", "AWS CDK", "AWS Lambda", "Python", "SQL", "ETL"]
