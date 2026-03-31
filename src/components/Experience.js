@@ -25,8 +25,8 @@ export const Experience = () => {
       duration: "April 2025 - October 2025",
       location: "Luxembourg",
       description: [
-        "Developed a Warehouse Closure Forecasting system to forecast warehouse closures across 5 European countries, preventing configuration defects through probabilistic and hazard-based models. Achieved PR-AUC of 0.90 and F1 of 0.84 for next-day risk prediction, and PR-AUC of 0.99 and F1 of 0.97 for early alerting tasks",
-        "Built fully automated AWS-based pipeline using CDK, Lambda, Airflow, Step Functions, and QuickSight to replace manual Page 0 performance review processes. Reduced reporting latency from several days to hours while establishing single source of truth for TNC team metrics",
+        "Masters thesis: Developed a Warehouse Closure Forecasting system to forecast warehouse closures across 5 European countries, preventing configuration defects through probabilistic and hazard-based models. Achieved PR-AUC of 0.90 and F1 of 0.84 for next-day risk prediction, and PR-AUC of 0.99 and F1 of 0.97 for early alerting tasks",
+        "Built fully automated AWS-based pipeline using CDK, Lambda, Airflow, Step Functions, and QuickSight to reduce metrics reporting latency from several days to minutes",
       ],
       logo: amazonLogo,
       technologies: ["Machine Learning", "AWS CDK", "AWS Lambda", "Python", "SQL", "ETL"]
