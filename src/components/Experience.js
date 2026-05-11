@@ -14,10 +14,12 @@ export const Experience = () => {
       duration: "December 2025 - present",
       location: "Luxembourg",
       description: [
-        "Building Automations, Infrastructures & Data Analyses"
+        "Leading Agentic AI integration in a high-impact product in European network transformation",
+        "Building production-scale AWS infrastructures, data pipelines, and analytics solutions using infrastructure as code",
+        "Built and deployed a real-time data pipeline on SNS, SQS, AWS Redshift, and Airflow to power a network change monitoring dashboard — cutting data latency from 3–5 hours to ~20 minutes and fully eliminating a manual refresh workflow"
       ],
       logo: amazonLogo,
-      technologies: ["AWS CDK", "GenAI", "Python", "TypeScript", "SQL", "QuickSight"]
+      technologies: ["AWS CDK", "GenAI", "Python", "TypeScript", "SQL", "SNS", "SQS", "Redshift", "Airflow"]
     },
     {
       company: "Amazon",
@@ -25,11 +27,11 @@ export const Experience = () => {
       duration: "April 2025 - October 2025",
       location: "Luxembourg",
       description: [
-        "Masters thesis: Developed a Warehouse Closure Forecasting system to forecast warehouse closures across 5 European countries, preventing configuration defects through probabilistic and hazard-based models. Achieved PR-AUC of 0.90 and F1 of 0.84 for next-day risk prediction, and PR-AUC of 0.99 and F1 of 0.97 for early alerting tasks",
-        "Built fully automated AWS-based pipeline using CDK, Lambda, Airflow, Step Functions, and QuickSight to reduce metrics reporting latency from several days to minutes",
+        "Master's thesis: Developed warehouse closure forecasting system across 5 European countries using probabilistic and hazard-based models; achieved PR-AUC of 0.90 and F1 of 0.84 for next-day risk prediction, PR-AUC of 0.99 and F1 of 0.97 for early alerting",
+        "Contributed to a fully automated AWS pipeline (CDK, Lambda, Airflow, Step Functions, QuickSight) replacing manual performance review processes, reducing reporting latency from days to hours while establishing single source of truth"
       ],
       logo: amazonLogo,
-      technologies: ["Machine Learning", "AWS CDK", "AWS Lambda", "Python", "SQL", "ETL"]
+      technologies: ["Machine Learning", "AWS CDK", "AWS Lambda", "Python", "SQL", "ETL", "Airflow", "Step Functions"]
     },
     {
       company: "L'Oréal",
@@ -46,14 +48,13 @@ export const Experience = () => {
       technologies: ["Python", "NLP", "BERT", "KeyBERT", "Clustering", "Multilingual Analysis"]
     },
     {
-      company: "Talan Corporate",
-      position: "Software Consulting Intern",
+      company: "Talan",
+      position: "Software Engineer Intern",
       duration: "July 2023",
       location: "Tunis, Tunisia",
       description: [
-        "Fine-tuned MobileNet model to recognize construction materials from images, achieving an accuracy score of 85%",
-        "Implemented computer vision techniques for image preprocessing and feature extraction",
-        "Collaborated with development team to integrate the model into the company's software ecosystem"
+        "Fine-tuned MobileNet model for material recognition from images, achieving high accuracy on a balanced dataset",
+        "Delivered the model for integration into a production Android application and led the presentation of the tool to the founder & president of the Talan group"
       ],
       logo: talanLogo,
       technologies: ["Python", "TensorFlow", "MobileNet", "Computer Vision", "Image Recognition"]
