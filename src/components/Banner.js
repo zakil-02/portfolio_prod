@@ -2,7 +2,6 @@ import { Container, Row, Col } from "react-bootstrap";
 import headerImg from "../assets/img/art_pixel_pdp.png";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import { FiMapPin } from 'react-icons/fi';
-import { HashLink } from 'react-router-hash-link';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 import HyperBadge from './HyperBadge';
@@ -24,7 +23,7 @@ export const Banner = () => {
             <TrackVisibility>
               {({ isVisible }) =>
                 <div className={`banner-content ${isVisible ? "animate__animated animate__fadeInUp" : ""}`}>
-                  <span className="eyebrow">Data Scientist · ML / Data Engineer</span>
+                  <span className="eyebrow">Data Scientist · ML Engineer</span>
                   <h1 className="banner-title">
                     Turning complex data into <span className="text-gradient">real-world impact</span>.
                   </h1>
@@ -42,12 +41,12 @@ export const Banner = () => {
                   </div>
 
                   <div className="banner-cta">
-                    <HashLink smooth to="#projects" className="btn-x btn-x--primary">
+                    <a href="#projects" className="btn-x btn-x--primary">
                       View Projects <ArrowRightCircle size={20} />
-                    </HashLink>
-                    <HashLink smooth to="#connect" className="btn-x btn-x--ghost">
+                    </a>
+                    <a href="#connect" className="btn-x btn-x--ghost">
                       Get in touch
-                    </HashLink>
+                    </a>
                   </div>
 
                   <div className="banner-stats">

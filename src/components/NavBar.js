@@ -3,10 +3,6 @@ import { Navbar, Nav, Container } from "react-bootstrap";
 import navIcon1 from '../assets/img/nav-icon1.svg';
 import navIcon2 from '../assets/img/nav-icon2.svg';
 import navIcon3 from '../assets/img/nav-icon3.svg';
-import { HashLink } from 'react-router-hash-link';
-import {
-  BrowserRouter as Router
-} from "react-router-dom";
 
 const SECTIONS = ['home', 'education', 'experience', 'projects', 'skills', 'interests'];
 
@@ -54,7 +50,6 @@ export const NavBar = () => {
   }, []);
 
   return (
-    <Router>
       <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
         <Container>
           <Navbar.Brand href="#home" aria-label="Zakaria Akil — home">
@@ -83,13 +78,12 @@ export const NavBar = () => {
                 <a href="https://github.com/zakil-02" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><img src={navIcon2} alt="" /></a>
                 <a href="https://leetcode.com/u/zakill/" target="_blank" rel="noopener noreferrer" aria-label="LeetCode"><img src={navIcon3} alt="" /></a>
               </div>
-              <HashLink to='#connect' smooth>
+              <a href="#connect" onClick={() => setActiveLink('connect')}>
                 <button className="vvd"><span>Let’s Connect</span></button>
-              </HashLink>
+              </a>
             </span>
           </Navbar.Collapse>
         </Container>
       </Navbar>
-    </Router>
   )
 }
