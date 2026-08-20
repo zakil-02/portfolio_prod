@@ -1,14 +1,48 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { Container, Row, Col, Card, Button, Modal, Badge } from 'react-bootstrap';
 import { projects } from "../data/projects_data";
 import { FiGithub, FiExternalLink, FiChevronDown, FiChevronUp, FiImage, FiFileText, FiLink } from 'react-icons/fi';
 import ImageCarousel from "./ImageCarousel";
+import Reveal from './Reveal';
 import '../App.css';
+
+// Category assignment by project id (data-driven, kept close to the UI).
+const CATEGORY_BY_ID = {
+  1: "Data & Systems",
+  2: "Machine Learning",
+  3: "Quant & Finance",
+  4: "Machine Learning",
+  5: "Quant & Finance",
+  6: "Machine Learning",
+  7: "Machine Learning",
+  8: "Machine Learning",
+  9: "Machine Learning",
+  10: "Data & Systems",
+  11: "Machine Learning",
+  12: "Machine Learning",
+  13: "Data & Systems",
+  14: "Data & Systems",
+  15: "Quant & Finance",
+  16: "Machine Learning",
+};
+
+const CATEGORIES = ["All", "Machine Learning", "Quant & Finance", "Data & Systems"];
 
 export const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [showModal, setShowModal] = useState(false);
   const [expandedProject, setExpandedProject] = useState(null);
+  const [activeFilter, setActiveFilter] = useState("All");
+
+  const catProjects = useMemo(
+    () => projects.map((p) => ({ ...p, category: CATEGORY_BY_ID[p.id] || "Machine Learning" })),
+    []
+  );
+
+  const filtered = useMemo(
+    () => (activeFilter === "All" ? catProjects : catProjects.filter((p) => p.category === activeFilter)),
+    [activeFilter, catProjects]
+  );
 
   const handleProjectClick = (project) => {
     setSelectedProject(project);
@@ -16,139 +50,142 @@ export const Projects = () => {
   };
 
   const toggleExpand = (id) => {
-    if (expandedProject === id) {
-      setExpandedProject(null);
-    } else {
-      setExpandedProject(id);
-    }
+    setExpandedProject(expandedProject === id ? null : id);
   };
 
   const handleReportClick = (reportLink) => {
     if (reportLink) {
-      // Open PDF in new window
-      window.open(reportLink, '_blank');
+      window.open(reportLink, '_blank', 'noopener,noreferrer');
     }
   };
 
   return (
     <section className="projects-section" id="projects">
       <Container>
-        <Row className="justify-content-center">
-          <Col xs={12}>
-            <h2 className="section-title text-center mb-5">Projects Portfolio</h2>
-          </Col>
-        </Row>
-        
+        <div className="section-head">
+          <span className="eyebrow">Projects</span>
+          <h2 className="section-title">Selected Work</h2>
+          <p className="section-sub">
+            Research, machine-learning, and engineering projects spanning data science,
+            quantitative finance, and applied AI.
+          </p>
+        </div>
+
+        <div className="project-filters" role="tablist" aria-label="Filter projects by category">
+          {CATEGORIES.map((cat) => (
+            <button
+              key={cat}
+              type="button"
+              role="tab"
+              aria-selected={activeFilter === cat}
+              className={`project-filter ${activeFilter === cat ? 'active' : ''}`}
+              onClick={() => setActiveFilter(cat)}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
+
         <Row className="g-4">
-          {projects.map((project) => (
-            <Col xs={12} key={project.id}>
-              <Card className="project-card">
-                <Card.Body>
-                  <Row className="align-items-center">
-                    <Col xs={12} md={4} className="mb-4 mb-md-0">
-                      <div className="project-image-container">
-                        <img 
-                          src={project.imgUrls[0]} 
-                          alt={project.title} 
-                          className="project-image" 
-                          onClick={() => handleProjectClick(project)}
-                        />
-                        <div className="project-image-overlay">
-                          <FiImage className="view-images-icon" />
-                          <span>View Images</span>
+          {filtered.map((project) => (
+            <Col xs={12} md={6} key={project.id}>
+              <Reveal>
+                <Card className="project-card">
+                  <div
+                    className="project-image-container"
+                    onClick={() => handleProjectClick(project)}
+                    role="button"
+                    tabIndex={0}
+                    aria-label={`View gallery for ${project.title}`}
+                    onKeyDown={(e) => { if (e.key === 'Enter') handleProjectClick(project); }}
+                  >
+                    {project.featured && <span className="project-featured-badge">Featured</span>}
+                    <img src={project.imgUrls[0]} alt={project.title} className="project-image" loading="lazy" />
+                    <div className="project-image-overlay">
+                      <FiImage className="view-images-icon" />
+                      <span>View gallery</span>
+                    </div>
+                  </div>
+                  <Card.Body>
+                    <h3 className="project-title">{project.title}</h3>
+
+                    <div className="project-tags">
+                      {project.tags.slice(0, 4).map((tag, i) => (
+                        <Badge key={i} className="project-tag custom-badge" bg="dark">{tag}</Badge>
+                      ))}
+                    </div>
+
+                    <p className="project-description">{project.description}</p>
+
+                    {expandedProject === project.id && (
+                      <div className="project-details">
+                        <h5 className="details-title">Project Details</h5>
+                        <p>{project.longDescription}</p>
+                        <div className="project-resources">
+                          <div className="resource-item">
+                            <strong>Report:</strong>
+                            {project.reportLink ? (
+                              <button className="resource-link" onClick={() => handleReportClick(project.reportLink)}>
+                                <FiFileText /> View
+                              </button>
+                            ) : (
+                              <span className="resource-placeholder">Coming soon</span>
+                            )}
+                          </div>
+                          <div className="resource-item">
+                            <strong>Reference:</strong>
+                            {project.referenceLink ? (
+                              <a href={project.referenceLink} target="_blank" rel="noopener noreferrer" className="resource-link">
+                                <FiLink /> View
+                              </a>
+                            ) : (
+                              <span className="resource-placeholder">Coming soon</span>
+                            )}
+                          </div>
                         </div>
                       </div>
-                    </Col>
-                    <Col xs={12} md={8}>
-                      <div className="project-header">
-                        <h3 className="project-title">{project.title}</h3>
-                        
-                        <div className="project-description">
-                          <p>{project.description}</p>
-                        </div>
-                        
-                        <div className="project-tags mb-3">
-                          {project.tags.map((tag, i) => (
-                            <Badge key={i} className="project-tag custom-badge" bg="dark">{tag}</Badge>
-                          ))}
-                        </div>
-                        
-                        <div className="project-links">
-                          {project.codeLink && (
-                            <a href={project.codeLink} target="_blank" rel="noopener noreferrer" className="project-link">
-                              <FiGithub /> Code
-                            </a>
-                          )}
-                          {project.demoLink && (
-                            <a href={project.demoLink} target="_blank" rel="noopener noreferrer" className="project-link">
-                              <FiExternalLink /> Demo
-                            </a>
-                          )}
-                          <button 
-                            className="toggle-details-btn"
-                            onClick={() => toggleExpand(project.id)}
-                            aria-expanded={expandedProject === project.id}
-                          >
-                            {expandedProject === project.id ? (
-                              <>Hide Details <FiChevronUp /></>
-                            ) : (
-                              <>Show Details <FiChevronDown /></>
-                            )}
+                    )}
+
+                    <div className="project-footer">
+                      <div className="project-links">
+                        {project.codeLink && (
+                          <a href={project.codeLink} target="_blank" rel="noopener noreferrer" className="project-link">
+                            <FiGithub /> Code
+                          </a>
+                        )}
+                        {project.demoLink && (
+                          <a href={project.demoLink} target="_blank" rel="noopener noreferrer" className="project-link">
+                            <FiExternalLink /> Demo
+                          </a>
+                        )}
+                        {project.reportLink && (
+                          <button className="project-link" onClick={() => handleReportClick(project.reportLink)}>
+                            <FiFileText /> Report
                           </button>
-                        </div>
-                        
-                        {expandedProject === project.id && (
-                          <div className="project-details mt-3">
-                            <h5 className="details-title">Project Details</h5>
-                            <p>{project.longDescription}</p>
-                            
-                            <div className="project-resources mt-3">
-                              <div className="resource-item">
-                                <strong>Report:</strong>
-                                {project.reportLink ? (
-                                  <button 
-                                    className="resource-link"
-                                    onClick={() => handleReportClick(project.reportLink)}
-                                    style={{ color: '#FF8C00' }}
-                                  >
-                                    <FiFileText /> View Report
-                                  </button>
-                                ) : (
-                                  <span className="resource-placeholder">Coming soon</span>
-                                )}
-                              </div>
-                              
-                              <div className="resource-item">
-                                <strong>Reference:</strong>
-                                {project.referenceLink ? (
-                                  <a 
-                                    href={project.referenceLink} 
-                                    target="_blank" 
-                                    rel="noopener noreferrer"
-                                    className="resource-link"
-                                    style={{ color: '#FF8C00' }}
-                                  >
-                                    <FiLink /> View Reference
-                                  </a>
-                                ) : (
-                                  <span className="resource-placeholder">Coming soon</span>
-                                )}
-                              </div>
-                            </div>
-                          </div>
                         )}
                       </div>
-                    </Col>
-                  </Row>
-                </Card.Body>
-              </Card>
+                      <button
+                        className="toggle-details-btn"
+                        onClick={() => toggleExpand(project.id)}
+                        aria-expanded={expandedProject === project.id}
+                      >
+                        {expandedProject === project.id ? (
+                          <>Less <FiChevronUp /></>
+                        ) : (
+                          <>Details <FiChevronDown /></>
+                        )}
+                      </button>
+                    </div>
+                  </Card.Body>
+                </Card>
+              </Reveal>
             </Col>
           ))}
         </Row>
       </Container>
 
-      <Modal 
-        show={showModal} 
+      <Modal
+        show={showModal}
         onHide={() => setShowModal(false)}
         size="lg"
         centered
@@ -162,71 +199,33 @@ export const Projects = () => {
             <Modal.Body>
               <ImageCarousel images={selectedProject.imgUrls} />
               <div className="mt-4">
-                <h5>Project Description</h5>
-                <p>{selectedProject.longDescription || selectedProject.description}</p>
-                
+                <h5>Overview</h5>
+                <p style={{ color: 'var(--text-secondary)', lineHeight: 1.65 }}>
+                  {selectedProject.longDescription || selectedProject.description}
+                </p>
+
                 <div className="project-tags mb-3">
                   {selectedProject.tags.map((tag, i) => (
                     <Badge key={i} className="project-tag custom-badge" bg="dark">{tag}</Badge>
                   ))}
                 </div>
-                
+
                 <div className="project-modal-links mb-3">
                   {selectedProject.codeLink && (
-                    <Button 
-                      href={selectedProject.codeLink} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      variant="outline-light"
-                      className="me-2"
-                    >
+                    <Button href={selectedProject.codeLink} target="_blank" rel="noopener noreferrer" variant="outline-light">
                       <FiGithub className="me-2" /> View Code
                     </Button>
                   )}
                   {selectedProject.demoLink && (
-                    <Button 
-                      href={selectedProject.demoLink} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      variant="outline-light"
-                    >
+                    <Button href={selectedProject.demoLink} target="_blank" rel="noopener noreferrer" variant="outline-light">
                       <FiExternalLink className="me-2" /> Live Demo
                     </Button>
                   )}
-                </div>
-
-                <div className="project-resources">
-                  <div className="resource-item">
-                    <strong>Report:</strong>
-                    {selectedProject.reportLink ? (
-                      <button 
-                        className="resource-link"
-                        onClick={() => handleReportClick(selectedProject.reportLink)}
-                        style={{ color: '#FF8C00' }}
-                      >
-                        <FiFileText /> View Report
-                      </button>
-                    ) : (
-                      <span className="resource-placeholder">Coming soon</span>
-                    )}
-                  </div>
-                  
-                  <div className="resource-item">
-                    <strong>Reference:</strong>
-                    {selectedProject.referenceLink ? (
-                      <a 
-                        href={selectedProject.referenceLink} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="resource-link"
-                        style={{ color: '#FF8C00' }}
-                      >
-                        <FiLink /> View Reference
-                      </a>
-                    ) : (
-                      <span className="resource-placeholder">Coming soon</span>
-                    )}
-                  </div>
+                  {selectedProject.reportLink && (
+                    <Button onClick={() => handleReportClick(selectedProject.reportLink)} variant="outline-light">
+                      <FiFileText className="me-2" /> Report
+                    </Button>
+                  )}
                 </div>
               </div>
             </Modal.Body>
