@@ -1066,309 +1066,56 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: 2;
 }
 
-/************ Skills Css ************/
-.skill {
-  padding: 0 0 50px 0;
-  position: relative;
-}
-
-.skill-bx {
-  background: var(--secondary-dark);
-  border-radius: 64px;
-  text-align: center;
-  padding: 60px 50px;
-  margin-top: -60px;
-}
-
-@media (max-width: 768px) {
-  .skill-bx {
-    padding: 40px 30px;
-    border-radius: 32px;
-  }
-}
-
-.skill h2 {
-  font-size: 45px;
+/************ Shared section header system ************/
+.section-title {
+  font-size: clamp(2rem, 4vw, 2.9rem);
   font-weight: 700;
+  letter-spacing: -0.025em;
+  text-align: center;
+  color: var(--text);
+  margin-bottom: 16px;
 }
 
-@media (max-width: 768px) {
-  .skill h2 {
-    font-size: 32px;
-  }
-}
-
-.skill p {
-  color: var(--text-secondary);
-  font-size: 18px;
-  letter-spacing: 0.8px;
-  line-height: 1.5em;
-  margin: 14px 0 75px 0;
-}
-
-@media (max-width: 768px) {
-  .skill p {
-    font-size: 16px;
-    margin: 14px 0 40px 0;
-  }
-}
-
-.skill-slider {
-  width: 80%;
-  margin: 0 auto;
-  position: relative;
-}
-
-.skill-slider .item img {
-  width: 50%;
-  margin: 0 auto 15px auto;
-}
-
-.background-image-left {
-  top: 28%;
-  position: absolute;
-  bottom: 0;
-  width: 40%;
-  z-index: -4;
-}
-
-@media (max-width: 768px) {
-  .background-image-left {
-    width: 100%;
-  }
-}
-
-/************ Project Section Css ************/
-.project {
-  padding: 80px 0;
-  position: relative;
-  width: 100%;
-  height: auto;
-  background-image: repeating-linear-gradient(
-    -45deg,
-    rgb(7, 5, 5) 0,
-    transparent 30px,
-    rgb(0, 0, 0) 30px,
-    transparent 60px,
-    rgb(0, 0, 0) 120px,
-    transparent 240px
-  );
-  background-color: var(--primary-dark);
-}
-
-.project h2 {
-  font-size: 45px;
-  font-weight: 700;
+.section-head {
+  max-width: 720px;
+  margin: 0 auto 56px;
   text-align: center;
 }
 
-@media (max-width: 768px) {
-  .project h2 {
-    font-size: 32px;
-  }
-}
-
-.project p {
-  color: var(--text-secondary);
-  font-size: 18px;
-  letter-spacing: 0.8px;
-  line-height: 1.5em;
-  margin: 14px auto 30px auto;
-  text-align: center;
-  width: 56%;
-}
-
-@media (max-width: 768px) {
-  .project p {
-    width: 90%;
-    font-size: 16px;
-  }
-  
-  .project {
-    padding: 60px 0;
-  }
-}
-
-.project .nav.nav-pills {
-  display: flex;
-  flex-wrap: wrap;
+.section-head .eyebrow {
   justify-content: center;
-  padding: 0.25rem;
-  width: 100%;
-  font-size: 14px;
-  align-items: center;
-  background-color: rgba(238, 238, 238, 0.09);
-  box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
+  margin-bottom: 16px;
 }
 
-.project .nav.nav-pills .nav-item {
-  width: 100%;
-}
-
-@media (min-width: 768px) {
-  .project .nav.nav-pills .nav-item {
-    width: 33.33333%;
-  }
-}
-
-.project .nav.nav-pills .nav-link {
-  background-color: transparent;
-  border-radius: 0;
-  padding: 17px 0;
-  color: var(--text-primary);
-  font-size: 17px;
-  letter-spacing: 0.8px;
-  font-weight: 500;
-  position: relative;
-  transition: var(--transition);
-}
-
-@media (max-width: 768px) {
-  .project .nav.nav-pills .nav-link {
-    font-size: 15px;
-    padding: 12px 0;
-  }
-}
-
-.project .nav.nav-pills .nav-link::before {
+.section-head .eyebrow::after {
   content: "";
-  position: absolute;
-  width: 0;
-  height: 100%;
-  background-color: var(--primary-dark);
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transition: var(--transition);
+  width: 22px;
+  height: 1px;
+  background: var(--accent);
+  opacity: 0.7;
 }
 
-.project .nav.nav-pills .nav-link.active::before {
-  width: 100% !important;
+.section-head .section-title {
+  margin-bottom: 14px;
 }
 
-.project .nav.nav-pills .nav-link.active {
-  border: 1px solid var(--text-primary);
-}
-
-.nav-link#projects-tabs-tab-first {
-  border: 1px solid var(--border-color);
-  border-radius: 55px 0px 0px 55px;
-}
-
-.nav-link#projects-tabs-tab-second {
-  border-top: 1px solid var(--border-color);
-  border-bottom: 1px solid var(--border-color);
-}
-
-.nav-link#projects-tabs-tab-third {
-  border: 1px solid var(--border-color);
-  border-radius: 0 55px 55px 0;
-}
-
-@media (max-width: 768px) {
-  .nav-link#projects-tabs-tab-first,
-  .nav-link#projects-tabs-tab-second,
-  .nav-link#projects-tabs-tab-third {
-    border-radius: 0;
-  }
-  
-  .nav-link#projects-tabs-tab-first {
-    border-radius: 55px 55px 0 0;
-  }
-  
-  .nav-link#projects-tabs-tab-third {
-    border-radius: 0 0 55px 55px;
-  }
-}
-
-.proj-imgbx {
-  position: relative;
-  border-radius: 30px;
-  overflow: hidden;
-  margin-bottom: 24px;
-}
-
-.proj-imgbx::before {
-  content: "";
-  background: linear-gradient(90.21deg, var(--primary-dark) -5.91%, #ac0a0a 111.58%);
-  opacity: 0.85;
-  position: absolute;
-  width: 100%;
-  height: 0;
-  transition: 0.4s ease-in-out;
-}
-
-.proj-imgbx:hover::before {
-  height: 100%;
-}
-
-.proj-txtx {
-  position: absolute;
+.section-sub,
+.section-description {
+  color: var(--text-secondary);
+  font-size: clamp(1rem, 1.3vw, 1.1rem);
+  line-height: 1.65;
+  margin: 0 auto;
   text-align: center;
-  top: 65%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: 0.5s ease-in-out;
-  opacity: 0;
-  width: 100%;
-}
-
-.proj-imgbx:hover .proj-txtx {
-  top: 50%;
-  opacity: 1;
-}
-
-.proj-txtx h4 {
-  font-size: 30px;
-  font-weight: 700;
-  letter-spacing: 0.8px;
-  line-height: 1.1em;
 }
 
 @media (max-width: 768px) {
-  .proj-txtx h4 {
-    font-size: 24px;
+  .section-head {
+    margin-bottom: 40px;
   }
 }
 
-.proj-txtx span {
-  font-style: italic;
-  font-weight: 400;
-  font-size: 15px;
-  letter-spacing: 0.8px;
-}
-
-.background-image-right {
-  top: 20%;
-  position: absolute;
-  bottom: 0;
-  width: 35%;
-  right: 0;
-  z-index: -4;
-}
-
-@media (max-width: 768px) {
-  .background-image-right {
-    width: 100%;
-  }
-}
-
-.carousel-item {
-  max-height: 400px;
-  overflow: hidden;
-}
-
-@media (max-width: 768px) {
-  .carousel-item {
-    max-height: 200px;
-  }
-}
-
-.project .nav.nav-pills .nav-link:hover,
-.project .nav.nav-pills .nav-link.active {
-  background-color: var(--primary-dark);
-  color: var(--text-primary);
-}
+/* (Legacy carousel/nav-pills template styles removed — superseded by the
+   modern .projects-section / .project-card system further below.) */
 
 /************ Contact Css ************/
 .contact {
