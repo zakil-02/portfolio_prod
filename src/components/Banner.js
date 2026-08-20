@@ -1,84 +1,71 @@
-import { useState, useEffect, useCallback } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-// import headerImg from "../assets/img/IMG_5468.jpg";
-// import headerImg from "../assets/img/akilz.jpg";
 import headerImg from "../assets/img/art_pixel_pdp.png";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
+import { FiMapPin } from 'react-icons/fi';
+import { HashLink } from 'react-router-hash-link';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 import HyperBadge from './HyperBadge';
 
+const STATS = [
+  { value: "16+", label: "Projects" },
+  { value: "4", label: "Roles & internships" },
+  { value: "2", label: "Master's programs" },
+];
+
 export const Banner = () => {
-  const [loopNum, setLoopNum] = useState(0);
-  const [isDeleting, setIsDeleting] = useState(false);
-  const [text, setText] = useState('');
-  const [delta, setDelta] = useState(300 - Math.random() * 100);
-  const tick = useCallback(() => {
-    const toRotate = ["Engineering student !"];
-    let i = loopNum % toRotate.length;
-    let fullText = toRotate[i];
-    let updatedText;
-  
-    if (isDeleting) {
-      updatedText = text.substring(0, text.length - 1);
-    } else {
-      updatedText = fullText.substring(0, text.length + 1);
-    }
-  
-    setText(updatedText);
-  
-    if (!isDeleting && updatedText === fullText) {
-      setIsDeleting(true);
-      setDelta(5);
-    } else if (isDeleting && updatedText === '') {
-      setIsDeleting(false);
-      setLoopNum(loopNum + 1);
-      setDelta(50);
-    }
-  }, [loopNum, isDeleting, text]);
-
-  useEffect(() => {
-    let ticker = setInterval(() => {
-      tick();
-    }, delta);
-
-    return () => { clearInterval(ticker) };
-  }, [text, delta, tick]);
-
   return (
     <section className="banner" id="home">
+      <div className="banner-aurora" aria-hidden="true"></div>
+      <div className="banner-grid" aria-hidden="true"></div>
       <Container>
         <Row className="align-items-center">
-          <Col xs={12} md={7} xl={8}>
+          <Col xs={12} md={7} xl={7}>
             <TrackVisibility>
               {({ isVisible }) =>
-              <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                <h1>Hi! I'm Zakaria</h1>
-                  <p>I am currently pursuing a master M2 Data Science (M2DS) at Ecole Polytechnique in parallel with the last year of my Master in Engineering at Telecom Paris. At Telecom Paris, I am pursuing a double major in Signal Processing for AI and Computer Vision. I'm passionate about applied science—where machine learning meets software & data engineering to solve real-world problems and create meaningful impact.</p>
-                  <div className="contact-info">
-                    <p><strong>Emails:</strong></p>
-                    <ul className="email-list">
-                      <li>zakaria.akil.2002@gmail.com</li>
-                      <li>zakaria.akil@polytechnique.edu</li>
-                      {/* <li>zakaria.akil@telecom-paris.fr</li> */}
-                    </ul>
+                <div className={`banner-content ${isVisible ? "animate__animated animate__fadeInUp" : ""}`}>
+                  <span className="eyebrow">Data Scientist · ML / Data Engineer</span>
+                  <h1 className="banner-title">
+                    Turning complex data into <span className="text-gradient">real-world impact</span>.
+                  </h1>
+                  <p className="banner-lead">
+                    I'm Zakaria — an MSc Data Science candidate at École Polytechnique (M2DS)
+                    and MEng at Télécom Paris. I build production ML systems, data pipelines,
+                    and quantitative research where machine learning meets software &amp; data engineering.
+                  </p>
+
+                  <div className="banner-meta">
+                    <span className="banner-chip"><FiMapPin aria-hidden="true" /> Luxembourg · Paris</span>
+                    <span className="banner-chip banner-chip--available">
+                      <span className="pulse-dot" aria-hidden="true"></span> Open to opportunities
+                    </span>
                   </div>
-                  <div className="contact-info">
-                    <p><strong>Locations:</strong></p>
-                    <ul className="email-list">
-                      <li>Luxembourg</li>
-                      <li>Paris</li>
-                    </ul>
+
+                  <div className="banner-cta">
+                    <HashLink smooth to="#projects" className="btn-x btn-x--primary">
+                      View Projects <ArrowRightCircle size={20} />
+                    </HashLink>
+                    <HashLink smooth to="#connect" className="btn-x btn-x--ghost">
+                      Get in touch
+                    </HashLink>
                   </div>
-                  <button onClick={() => console.log('connect')}>Let's Connect <ArrowRightCircle size={25} /></button>
-              </div>}
+
+                  <div className="banner-stats">
+                    {STATS.map((stat) => (
+                      <div className="banner-stat" key={stat.label}>
+                        <span className="banner-stat-value">{stat.value}</span>
+                        <span className="banner-stat-label">{stat.label}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>}
             </TrackVisibility>
           </Col>
-          <Col xs={12} md={5} xl={4}>
+          <Col xs={12} md={5} xl={5}>
             <TrackVisibility>
               {({ isVisible }) =>
-                <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                  <HyperBadge imageSrc={headerImg} alt="Zakaria Akil Profile" />
+                <div className={isVisible ? "animate__animated animate__fadeIn animate__delay-1s" : ""}>
+                  <HyperBadge imageSrc={headerImg} alt="Zakaria Akil" />
                 </div>}
             </TrackVisibility>
           </Col>

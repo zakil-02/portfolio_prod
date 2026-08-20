@@ -1,12 +1,18 @@
-/* HyperBadge CSS - Inspired by Amazon's HyperBadge */
+/* HyperBadge — refined profile medallion with gradient ring + float */
 
 .hyperbadge-container {
   position: relative;
-  width: 300px;
-  height: 300px;
+  width: 320px;
+  height: 320px;
   margin: 0 auto;
-  perspective: 1000px;
+  perspective: 1200px;
   transform-style: preserve-3d;
+  animation: hyperbadge-float 6s ease-in-out infinite;
+}
+
+@keyframes hyperbadge-float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-14px); }
 }
 
 .hyperbadge {
@@ -14,16 +20,15 @@
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
-  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
   border-radius: 50%;
-  box-shadow: 
-    0 10px 30px rgba(0, 0, 0, 0.7),
-    0 0 0 1px rgba(255, 140, 0, 0.3),
-    0 0 20px rgba(255, 140, 0, 0.5);
+  box-shadow:
+    0 30px 70px -20px rgba(0, 0, 0, 0.8),
+    0 0 60px -12px rgba(255, 140, 66, 0.4);
 }
 
 .hyperbadge-container:hover .hyperbadge {
-  transform: rotateY(10deg) rotateX(-10deg);
+  transform: rotateY(12deg) rotateX(-10deg);
 }
 
 .hyperbadge-photo {
@@ -34,11 +39,11 @@
   backface-visibility: hidden;
   object-fit: cover;
   transform: translateZ(0);
-  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .hyperbadge-container:hover .hyperbadge-photo {
-  transform: translateZ(10px);
+  transform: translateZ(16px);
 }
 
 .hyperbadge-glow {
@@ -49,14 +54,14 @@
   height: 100%;
   border-radius: 50%;
   background: radial-gradient(
-    circle at 30% 30%,
-    rgba(255, 255, 255, 0.4) 0%,
-    rgba(255, 255, 255, 0) 60%
+    circle at 30% 26%,
+    rgba(255, 255, 255, 0.35) 0%,
+    rgba(255, 255, 255, 0) 55%
   );
-  opacity: 0;
-  transition: opacity 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  opacity: 0.6;
+  transition: opacity 0.7s cubic-bezier(0.23, 1, 0.32, 1);
   pointer-events: none;
-  transform: translateZ(20px);
+  transform: translateZ(24px);
 }
 
 .hyperbadge-container:hover .hyperbadge-glow {
@@ -72,42 +77,62 @@
   border-radius: 50%;
   background: linear-gradient(
     135deg,
-    rgba(255, 255, 255, 0.1) 0%,
-    rgba(255, 255, 255, 0) 60%
+    rgba(255, 255, 255, 0.12) 0%,
+    rgba(255, 255, 255, 0) 55%
   );
   opacity: 0;
-  transition: opacity 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: opacity 0.7s cubic-bezier(0.23, 1, 0.32, 1);
   pointer-events: none;
-  transform: translateZ(15px);
+  transform: translateZ(18px);
 }
 
 .hyperbadge-container:hover .hyperbadge-reflection {
   opacity: 1;
 }
 
+/* Rotating gradient ring */
 .hyperbadge-border {
   position: absolute;
-  top: -4px;
-  left: -4px;
-  right: -4px;
-  bottom: -4px;
+  top: -6px;
+  left: -6px;
+  right: -6px;
+  bottom: -6px;
   border-radius: 50%;
-  border: 4px solid var(--accent-orange);
-  box-shadow: 0 0 20px rgba(255, 140, 0, 0.5);
-  opacity: 1;
-  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-  transform: translateZ(5px);
+  padding: 3px;
+  background: conic-gradient(
+    from 180deg,
+    #ffb26b,
+    #ff6a2b,
+    #7c6bff,
+    #ff8c42,
+    #ffb26b
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0.9;
+  transform: translateZ(6px);
+  animation: hyperbadge-spin 12s linear infinite;
 }
 
-.hyperbadge-container:hover .hyperbadge-border {
-  border-width: 5px;
-  box-shadow: 0 0 30px rgba(255, 140, 0, 0.7);
+@keyframes hyperbadge-spin {
+  to { transform: translateZ(6px) rotate(360deg); }
 }
 
 /* Responsive styles */
+@media (max-width: 991px) {
+  .hyperbadge-container {
+    width: 260px;
+    height: 260px;
+    margin-top: 20px;
+  }
+}
+
 @media (max-width: 768px) {
   .hyperbadge-container {
-    width: 200px;
-    height: 200px;
+    width: 220px;
+    height: 220px;
   }
 }
