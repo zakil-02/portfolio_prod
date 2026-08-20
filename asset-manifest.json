@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio_prod/static/css/main.c6e893ff.css",
-    "main.js": "/portfolio_prod/static/js/main.41ee9d74.js",
+    "main.css": "/portfolio_prod/static/css/main.4778e4b8.css",
+    "main.js": "/portfolio_prod/static/js/main.b0b9ac5a.js",
     "static/js/453.15a9cb34.chunk.js": "/portfolio_prod/static/js/453.15a9cb34.chunk.js",
     "static/media/art.png": "/portfolio_prod/static/media/art.7d74d7d6cb3a16fe0be6.png",
     "static/media/levitate2.png": "/portfolio_prod/static/media/levitate2.fa19074afbdd353b211d.png",
@@ -12,8 +12,6 @@
     "static/media/Poster_PAF.pdf": "/portfolio_prod/static/media/Poster_PAF.7e1fbcbd78fc67bbea4a.pdf",
     "static/media/cooperative_project_kernels.pdf": "/portfolio_prod/static/media/cooperative_project_kernels.8b232731233a1bf617f2.pdf",
     "static/media/s3.png": "/portfolio_prod/static/media/s3.6f5194238d2cd52a2f85.png",
-    "static/media/color-sharp.png": "/portfolio_prod/static/media/color-sharp.bea361cfef80fefc2d1e.png",
-    "static/media/color-sharp2.png": "/portfolio_prod/static/media/color-sharp2.c87586c6c2f549cb4aa6.png",
     "static/media/IMA205_zakaria_akil.pdf": "/portfolio_prod/static/media/IMA205_zakaria_akil.10545bf02c7e084e9794.pdf",
     "static/media/radiomique2.png": "/portfolio_prod/static/media/radiomique2.3ebef947373bf807e069.png",
     "static/media/Operator_learning_Project.pdf": "/portfolio_prod/static/media/Operator_learning_Project.bd216d431ee9a56828e2.pdf",
@@ -55,7 +53,6 @@
     "static/media/glue.png": "/portfolio_prod/static/media/glue.08608de3142579520e1d.png",
     "static/media/lm6e.png": "/portfolio_prod/static/media/lm6e.02c876087362312a2a61.png",
     "static/media/univ.jpg": "/portfolio_prod/static/media/univ.a38a1ef29ef26ce7c3f4.jpg",
-    "static/media/contact-img.svg": "/portfolio_prod/static/media/contact-img.62aa99e0f3b968b5d1ce9eb047f34fc7.svg",
     "static/media/solidity.png": "/portfolio_prod/static/media/solidity.f64b92b2591809a08001.png",
     "static/media/loreal.png": "/portfolio_prod/static/media/loreal.324adca301ec3a6f06e7.png",
     "static/media/talan.png": "/portfolio_prod/static/media/talan.fc41efecc6da5f1059f4.png",
@@ -67,19 +64,19 @@
     "static/media/postgre.svg": "/portfolio_prod/static/media/postgre.9aed68683d15cfc3c3fd8ddf1d89ff4e.svg",
     "static/media/fc.png": "/portfolio_prod/static/media/fc.d70e2b78cca941f40a08.png",
     "static/media/nav-icon2.svg": "/portfolio_prod/static/media/nav-icon2.8a3c6f519ebcdc48b76e5cc8c23f7089.svg",
+    "index.html": "/portfolio_prod/index.html",
     "static/media/nav-icon3.svg": "/portfolio_prod/static/media/nav-icon3.e941101e941de77187949f4bff3c4c1f.svg",
     "static/media/music-icon.svg": "/portfolio_prod/static/media/music-icon.8ea0102e925d22d26f7f2056596a4b38.svg",
-    "index.html": "/portfolio_prod/index.html",
     "static/media/nav-icon1.svg": "/portfolio_prod/static/media/nav-icon1.dff40ae802524d8fc0cbce3f312abe4f.svg",
     "static/media/tv-icon.svg": "/portfolio_prod/static/media/tv-icon.8151244f31fcfaad5a1d8d56671ed620.svg",
     "static/media/css.svg": "/portfolio_prod/static/media/css.cce1e71a67427e01caedeed1b01d4efa.svg",
     "static/media/html.svg": "/portfolio_prod/static/media/html.0c8899975fbb5345002df9b408db0cc0.svg",
-    "main.c6e893ff.css.map": "/portfolio_prod/static/css/main.c6e893ff.css.map",
-    "main.41ee9d74.js.map": "/portfolio_prod/static/js/main.41ee9d74.js.map",
+    "main.4778e4b8.css.map": "/portfolio_prod/static/css/main.4778e4b8.css.map",
+    "main.b0b9ac5a.js.map": "/portfolio_prod/static/js/main.b0b9ac5a.js.map",
     "453.15a9cb34.chunk.js.map": "/portfolio_prod/static/js/453.15a9cb34.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c6e893ff.css",
-    "static/js/main.41ee9d74.js"
+    "static/css/main.4778e4b8.css",
+    "static/js/main.b0b9ac5a.js"
   ]
 }
