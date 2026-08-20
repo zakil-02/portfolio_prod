@@ -1,7 +1,5 @@
 import { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
-import telecom from "../assets/img/telecom_new.png";
-import ep from "../assets/img/epoly.png";
 import navIcon1 from '../assets/img/nav-icon1.svg';
 import navIcon2 from '../assets/img/nav-icon2.svg';
 import navIcon3 from '../assets/img/nav-icon3.svg';
@@ -60,8 +58,8 @@ export const NavBar = () => {
       <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
         <Container>
           <Navbar.Brand href="#home" aria-label="Zakaria Akil — home">
-            <img src={ep} alt="École Polytechnique" />
-            <img src={telecom} alt="Télécom Paris" />
+            <span className="brand-mark">ZA</span>
+            <span className="brand-name">Zakaria Akil</span>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>

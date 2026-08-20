@@ -596,30 +596,40 @@ nav.navbar a.navbar-brand {
   width: auto;
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
   padding: 0;
 }
 
-nav.navbar a.navbar-brand img {
-  width: auto;
-  height: 30px;
-  object-fit: contain;
-  opacity: 0.95;
-  transition: opacity var(--transition);
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: var(--brand-gradient);
+  color: #0c0d10;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  box-shadow: 0 8px 22px -8px rgba(255, 106, 43, 0.55);
+  transition: transform var(--transition);
 }
 
-nav.navbar a.navbar-brand img + img {
-  padding-left: 16px;
-  border-left: 1px solid var(--hairline-strong);
+nav.navbar a.navbar-brand:hover .brand-mark {
+  transform: rotate(-6deg) scale(1.04);
 }
 
-nav.navbar a.navbar-brand:hover img {
-  opacity: 1;
+.brand-name {
+  font-weight: 700;
+  font-size: 17px;
+  letter-spacing: -0.02em;
+  color: var(--text);
 }
 
-@media (max-width: 768px) {
-  nav.navbar a.navbar-brand img {
-    height: 24px;
+@media (max-width: 480px) {
+  .brand-name {
+    display: none;
   }
 }
 
