@@ -1,6 +1,12 @@
 # Personal Portfolio
 
-A modern, responsive portfolio website built with React, showcasing my projects, skills, and experience.
+A modern, responsive portfolio for a Data Scientist / ML & Data Engineer — built with React and a custom, Apple-inspired dark design system. Showcases experience, education, projects, and skills with an animated hero, scroll-reveal sections, a filterable project grid, and a glassmorphism navbar.
+
+## ✨ Design
+
+- Cohesive design-token system (layered neutrals + a warm amber brand gradient) in `src/App.css`
+- Fluid typography (`clamp()`), custom scroll-reveal (`components/Reveal.js`), and `prefers-reduced-motion` support
+- Fully responsive (mobile → desktop) with a scroll-spy navbar and filterable projects
 
 ## 🌐 Live Website
 
@@ -76,12 +82,11 @@ This command will:
 
 ## 🛠️ Built With
 
-- **React** - Frontend framework
-- **React Bootstrap** - UI components
-- **Animate.css** - Animations
+- **React 19** - Frontend framework
+- **React Bootstrap** - Layout & UI components
+- **Custom CSS design system** - Design tokens, gradients, motion
+- **Animate.css** + IntersectionObserver - Entrance & scroll-reveal animations
 - **EmailJS** - Contact form functionality
-- **React Multi Carousel** - Project carousel
-- **React Router** - Navigation
 - **GitHub Pages** - Hosting
 
 ## 📁 Project Structure
