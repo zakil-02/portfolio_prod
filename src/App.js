@@ -10,8 +10,7 @@ import { EducationComponent } from './components/TelecomEducation.js';
 import { Experience } from './components/Experience.js';
 import { Loader } from './components/Loader.js';
 import { Interests } from './components/Interests.js';
-import ProgrammingLanguages from './components/prgL.js';
-import Softwares from './components/Software.js';
+import TechStack from './components/TechStack.js';
 
 
 function App() {
@@ -20,11 +19,11 @@ function App() {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setIsLoading(false);
-    }, 3000); // Reduced loading time from 5 to 3 seconds
+    }, 1800);
 
-    // Clean up the timeout to avoid memory leaks
     return () => clearTimeout(timeout);
   }, []);
+
   return (
     <div className="App">
       {isLoading ? (
@@ -32,18 +31,18 @@ function App() {
       ) : (
         <div>
           <NavBar />
-          <Banner />
-          <EducationComponent />
-          <Experience />
-          <Projects />
-          <ProgrammingLanguages />
-          <Softwares />
-          <Interests />
-          <Contact />
+          <main>
+            <Banner />
+            <EducationComponent />
+            <Experience />
+            <Projects />
+            <TechStack />
+            <Interests />
+            <Contact />
+          </main>
           <Footer />
         </div>
       )}
-      
     </div>
   );
 }
