@@ -1,6 +1,5 @@
 import { Container, Row, Col } from "react-bootstrap";
-import 'animate.css';
-import TrackVisibility from 'react-on-screen';
+import Reveal from "./Reveal";
 import footballIcon from "../assets/img/champ.png";
 import rapIcon from "../assets/img/music-icon.svg";
 import fifaIcon from "../assets/img/fc.png";
@@ -33,36 +32,25 @@ export const Interests = () => {
   return (
     <section className="interests" id="interests">
       <Container>
-        <Row>
-          <Col>
-            <TrackVisibility>
-              {({ isVisible }) =>
-                <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                  <h2 className="section-title">My Interests</h2>
-                  <p className="section-description">
-                    Beyond my professional life, here are some things I'm passionate about.
-                  </p>
-                </div>
-              }
-            </TrackVisibility>
-          </Col>
-        </Row>
+        <div className="section-head">
+          <span className="eyebrow">Beyond work</span>
+          <h2 className="section-title">Interests</h2>
+          <p className="section-sub">
+            A few things I'm passionate about outside of data and code.
+          </p>
+        </div>
         <Row>
           {interests.map((interest, index) => (
-            <Col xs={12} md={6} xl={3} key={index}>
-              <TrackVisibility>
-                {({ isVisible }) =>
-                  <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                    <div className="interest-card">
-                      <div className="interest-icon">
-                        <img src={interest.icon} alt={interest.title} />
-                      </div>
-                      <h3>{interest.title}</h3>
-                      <p>{interest.description}</p>
-                    </div>
+            <Col xs={12} sm={6} xl={3} key={index}>
+              <Reveal delay={Math.min(index + 1, 4)}>
+                <div className="interest-card">
+                  <div className="interest-icon">
+                    <img src={interest.icon} alt={interest.title} />
                   </div>
-                }
-              </TrackVisibility>
+                  <h3>{interest.title}</h3>
+                  <p>{interest.description}</p>
+                </div>
+              </Reveal>
             </Col>
           ))}
         </Row>
