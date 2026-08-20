@@ -1,6 +1,7 @@
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import { FiCalendar, FiMapPin } from 'react-icons/fi';
 import '../App.css';
+import Reveal from './Reveal';
 import amazonLogo from '../assets/img/amazon.png';
 import lorealLogo from '../assets/img/loreal.png';
 import talanLogo from '../assets/img/talan.png';
@@ -77,15 +78,19 @@ export const Experience = () => {
   return (
     <section className="experience" id="experience">
       <Container>
-        <Row className="justify-content-center">
-          <Col xs={12}>
-            <h2 className="section-title text-center mb-5">Professional Experience</h2>
-          </Col>
-        </Row>
-        
+        <div className="section-head">
+          <span className="eyebrow">Experience</span>
+          <h2 className="section-title">Professional Experience</h2>
+          <p className="section-sub">
+            Building production ML systems, data pipelines, and analytics — from research prototypes
+            to infrastructure deployed at scale.
+          </p>
+        </div>
+
         <Row className="g-4">
           {experiences.map((exp, index) => (
             <Col xs={12} key={index}>
+              <Reveal delay={Math.min(index + 1, 3)}>
               <Card className="experience-card">
                 <Card.Body>
                   <Row className="align-items-center">
@@ -131,6 +136,7 @@ export const Experience = () => {
                   </Row>
                 </Card.Body>
               </Card>
+              </Reveal>
             </Col>
           ))}
         </Row>

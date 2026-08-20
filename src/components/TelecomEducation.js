@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
-import { FiCalendar, FiChevronDown, FiChevronUp } from 'react-icons/fi';
+import { FiCalendar, FiMapPin, FiChevronDown, FiChevronUp } from 'react-icons/fi';
 import '../App.css';
+import Reveal from './Reveal';
 import telecomLogo from '../assets/img/telecom_new.png';
 import epolyLogo from '../assets/img/epoly.png';
 import cpgeLogo from '../assets/img/lm6e.png';
@@ -73,46 +74,52 @@ export const EducationComponent = () => {
   return (
     <section className="education" id="education">
       <Container>
-        <Row className="justify-content-center">
-          <Col xs={12}>
-            <h2 className="section-title text-center mb-5">Academic Background</h2>
-          </Col>
-        </Row>
-        
+        <div className="section-head">
+          <span className="eyebrow">Academics</span>
+          <h2 className="section-title">Academic Background</h2>
+          <p className="section-sub">
+            Graduate training in data science, statistics, and signal processing across two of France's
+            leading engineering schools.
+          </p>
+        </div>
+
         <Row className="g-4">
           {schools.map((school, index) => (
             <Col xs={12} key={index}>
+              <Reveal delay={Math.min(index + 1, 3)}>
               <Card className="education-card">
                 <Card.Body>
                   <Row className="align-items-center">
                     <Col xs={12} md={3} className="mb-4 mb-md-0">
                       <div className="education-logo-container">
-                        <img 
-                          src={school.logo} 
-                          alt={school.name} 
-                          className={`education-logo ${school.name === "Télécom Paris" ? "telecom-logo" : ""}`} 
+                        <img
+                          src={school.logo}
+                          alt={school.name}
+                          className={`education-logo ${school.name === "Télécom Paris" ? "telecom-logo" : ""}`}
                         />
                       </div>
                     </Col>
                     <Col xs={12} md={9}>
                       <div className="education-header">
-                        <div className="d-flex justify-content-between align-items-center">
-                          <div>
-                            <h3 className="education-institution">{school.name}</h3>
-                            <h4 className="education-degree">{school.degree}</h4>
+                        <h3 className="education-institution">{school.name}</h3>
+                        <h4 className="education-degree">{school.degree}</h4>
+                        <div className="education-meta">
+                          <div className="education-meta-item">
+                            <FiCalendar className="education-icon" />
+                            <span>{school.duration}</span>
                           </div>
-                          <div className="education-meta">
+                          {school.location && (
                             <div className="education-meta-item">
-                              <FiCalendar className="education-icon" />
-                              <span>{school.duration}</span>
+                              <FiMapPin className="education-icon" />
+                              <span>{school.location}</span>
                             </div>
-                          </div>
+                          )}
                         </div>
-                        
+
                         {school.description && (
                           <p className="education-description mt-2">{school.description}</p>
                         )}
-                        
+
                         {school.courses && (
                           <div className="mt-3">
                             <button 
@@ -149,6 +156,7 @@ export const EducationComponent = () => {
                   </Row>
                 </Card.Body>
               </Card>
+              </Reveal>
             </Col>
           ))}
         </Row>
