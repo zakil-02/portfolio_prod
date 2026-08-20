@@ -255,6 +255,12 @@ p.danger {
 .reveal.delay-3 { transition-delay: 0.24s; }
 .reveal.delay-4 { transition-delay: 0.32s; }
 
+/* Let reveal-wrapped cards keep equal height inside grid columns */
+.projects-section .reveal,
+.interests .reveal {
+  height: 100%;
+}
+
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.001ms !important;
